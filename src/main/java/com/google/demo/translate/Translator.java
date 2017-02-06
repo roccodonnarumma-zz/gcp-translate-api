@@ -105,7 +105,8 @@ public class Translator {
             List<Translation> translations = translate.translate(
                     texts,
                     TranslateOption.sourceLanguage(source),
-                    TranslateOption.targetLanguage(target));
+                    TranslateOption.targetLanguage(target),
+                    TranslateOption.model("nmt"));
 
             List<String> results = new ArrayList<>();
             for(int i = 0; i < lines.size(); i++) {
